@@ -11,17 +11,17 @@ canvas {
 }
 
 .apagarTrianguloSelecionado{
-    background-color: black; /* Cor de fundo do botão (vermelho) */
-    color: white; /* Cor do texto do botão */
-    padding: 8px 12px; /* Espaçamento interno do botão */
-    border: none; /* Remove a borda do botão */
-    border-radius: 4px; /* Adiciona bordas arredondadas ao botão */
-    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
-    margin-top: 10px; /* Espaçamento superior entre o botão e os elementos acima dele */
+    background-color: black;
+    color: white;
+    padding: 8px 12px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    margin-top: 10px; 
 }
 
 .apagarTrianguloSelecionado:hover{
-    background-color: #d32f2f; /* Cor de fundo do botão (vermelho mais escuro) ao passar o mouse */
+    background-color: #d32f2f; 
 }
 
 .novoTriangulo{   
@@ -58,17 +58,17 @@ canvas {
 }
 
 .infoTriangulo button {
-    background-color: black; /* Cor de fundo do botão (vermelho) */
-    color: white; /* Cor do texto do botão */
-    padding: 8px 12px; /* Espaçamento interno do botão */
-    border: none; /* Remove a borda do botão */
-    border-radius: 4px; /* Adiciona bordas arredondadas ao botão */
-    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
-    margin-top: 10px; /* Espaçamento superior entre o botão e os elementos acima dele */
+    background-color: black;
+    color: white;
+    padding: 8px 12px; 
+    border: none;
+    border-radius: 4px; 
+    cursor: pointer;
+    margin-top: 10px; 
 }
 
 .infoTriangulo button:hover {
-    background-color: #d32f2f; /* Cor de fundo do botão (vermelho mais escuro) ao passar o mouse */
+    background-color: #d32f2f; 
 }
 
 .infoTrianguloSelecionadoDiv{
