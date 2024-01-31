@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Poly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="tela">
+        <h1>Fill Polly</h1>
+        <canvas id="canvas" width="800" height="500"></canvas>
+        <button id="buttonNovoTriangulo" class="novoTriangulo">Criando Triângulos</button>
+        <button id="buttonApagarTriangulos" class="apagarTriangulos">Apagar todos os Triângulos</button>
+
+        <div class="corVertices">
+            <label for="corVertice1">Vertice 1</label>
+            <input type="color" id="corVertice1" value="#000000">
+
+            <label for="corVertice2">Vertice 2</label>
+            <input type="color" id="corVertice2" value="#000000">
+
+            <label for="corVertice3">Vertice 3</label>
+            <input type="color" id="corVertice3" value="#000000">
+
+            <label for="corAresta">Aresta </label>
+            <input type="color" id="corAresta" value="#000000">
+        </div>
+        <div id="infoTrianguloSelecionadoDiv"></div>
+    
+        <div id="infoTriangulosDiv"></div>
+
+       
+        <script src="app.js"></script>
+    </section>
+</body>
+</html>
