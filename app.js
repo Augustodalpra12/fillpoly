@@ -196,9 +196,10 @@ function scanline(triangulo, corRGB1, corRGB2, corRGB3) {
 
     var dy1 = verticesOrdenados[1].y - verticesOrdenados[0].y;
     var dy2 = verticesOrdenados[2].y - verticesOrdenados[1].y;
+    var dy3 = verticesOrdenados[2].y - verticesOrdenados[0].y;
 
     var dx1 = (verticesOrdenados[1].x - verticesOrdenados[0].x) / dy1;
-    var dx2 = (verticesOrdenados[2].x - verticesOrdenados[0].x) / (verticesOrdenados[2].y - verticesOrdenados[0].y);
+    var dx2 = (verticesOrdenados[2].x - verticesOrdenados[0].x) / dy3;
     var dx3 = (verticesOrdenados[2].x - verticesOrdenados[1].x) / dy2;
 
     var x1 = verticesOrdenados[0].x, x2 = verticesOrdenados[0].x;
@@ -217,8 +218,8 @@ function scanline(triangulo, corRGB1, corRGB2, corRGB3) {
         x2 += dx2;
         corAtual2 = corAtual2.map((c, i) => (c + (corRGB3[i] - corRGB1[i]) / (verticesOrdenados[2].y - verticesOrdenados[0].y)));
 
-        for (var x = Math.min(x1, x2); x < Math.max(x1, x2); x++) {
-            var t = (x - x1) / (x2 - x1);
+        for (var x = Math.ceil( Math.min(x1, x2)); x < Math.floor(Math.max(x1, x2)); x++) {
+            var t = (x - x1) / (x1 - x2);
             var corAtual = corAtual1.map((c, i) => (c * (1 - t) + corAtual2[i] * t));
             desenharPixel(x, y, corAtual);
         }
@@ -228,9 +229,9 @@ function scanline(triangulo, corRGB1, corRGB2, corRGB3) {
 // desenhar pixel no canvas //
 function desenharPixel(x, y, cor, triangulo) {
     var ctx = canvas.getContext("2d");
-    ctx.lineWidth = 7;
+    ctx.lineWidth = 1;
     ctx.fillStyle = `rgb(${cor[0]}, ${cor[1]}, ${cor[2]})`;
-    ctx.fillRect(x, y, 2, 2);
+    ctx.fillRect(x, y, 1, 1);
 }
 
 // converter hexadecimal para rgb //
